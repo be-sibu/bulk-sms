@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --italicText: "Grand Hotel", cursive;
+  --primaryColor: #61991d;
+  --secondaryColor: #fca311;
+  --mainDark: #151615;
+  --mainWhite: #fff;
+  --mainGray: #8b8989;
+  --mainTransition: all 1s ease-in-out;
+  --titleLetterSpacing: 0.3rem;
+  --textLetterSpacing: 0.1rem;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.content-divider {
+  height: 0.2rem;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--mainDark),
+    var(--mainGray),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+/* header section */
+.header {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  text-align: center;
+}
+.header-center {
+  width: 95vw;
+  margin: 0 auto;
+}
+.top-info {
+  display: flex;
+  flex-direction: column;
+}
+.header-second-flex {
+  display: flex;
+  flex-direction: column;
+}
+.header-icon {
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+  padding: 0.5rem 0.3rem;
+  transition: var(--mainTransition);
+}
+.login {
+  color: var(--mainWhite);
+  padding: 0.1rem 0.05rem;
+  transition: var(--mainTransition);
+}
+.login:hover {
+  text-decoration: underline;
+  color: var(--secondaryColor);
+  transform: translateX(-5%) scale(1.1);
+}
+.login:hover .header-icon {
+  color: var(--secondaryColor);
+}
+.search {
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .top-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-second-flex {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header-center {
+    width: 80vw;
+  }
+}
+/* header section ends */
+
+/* menus section */
+
+.menus-center {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sort-down {
+  color: var(--mainDark);
+  padding: 0 0.3rem;
+}
+.logo-text,
+.logo-icon {
+  color: var(--secondaryColor);
+}
+.logo {
+  font-size: 2.5rem;
+  transition: var(--mainTransition);
+}
+.logo:hover {
+  transform: scale(1.08) translateY(-5px);
+}
+.menu-with-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+}
+.single-menu {
+  margin: 0.3rem 0.7rem;
+  padding: 0.1rem 0.1rem;
+  transition: var(--mainTransition);
+}
+.single-menu:hover {
+  transform: scale(1.1) translateX(-5px);
+}
+.single-menu > a {
+  color: var(--mainGray);
+}
+.signup-btn {
+  margin: 0.3rem 0.2rem;
+  padding: 0.3rem 0.4rem;
+  font-size: 1.5rem;
+  background: var(--secondaryColor);
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  border: 2px solid var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.signup-btn:hover {
+  color: var(--mainDark);
+  background: var(--mainWhite);
+  transform: scale(1.05) translatey(-5px);
+  border-color: var(--mainDark);
+}
+@media screen and (min-width: 768px) {
+  .menus-center {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-with-btn {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menus-center {
+    width: 90vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* menus section ends */
